@@ -13,7 +13,7 @@ import Firestore from '@react-native-firebase/firestore';
 import Todo from './Todo'; 
 import { Actions } from 'react-native-router-flux';
 import moment from "moment"
-import myImage from './img/logo.png';
+
 
 function Home() {
     const ref = Firestore().collection('todos');
@@ -75,7 +75,7 @@ function Home() {
     return (
       <>
         <Appbar >
-        <Appbar.Content title={'Logo'} />
+        {/* <Image source={require('./logo.png')} style={{ width: 50, height: 50 }} /> */}
         </Appbar>
         <FlatList 
         style={{flex: 1}}
@@ -85,7 +85,7 @@ function Home() {
       />
         
         <TouchableOpacity onPress={() => gotoAdd()}>
-                <IconAwesome name="plus-circle" size={40} backgroundColor="#FFFFFF" color="#FF0000" />
+                
         </TouchableOpacity>
         
       </>
